@@ -1,0 +1,40 @@
+cabal-version: >=1.8
+name:          regex-parsec
+version:       0.91
+description:   An implementation of Text.Regex using Parsec.
+license:       BSD3
+license-file:  LICENSE
+copyright:     Copyright (c) 2006, Christopher Kuklewicz
+author:        Christopher Kuklewicz
+maintainer:    wenkokke@users.noreply.github.com
+build-type:    Simple
+stability:     Seems to work, passes a few tests
+homepage:      https://github.com/wenkokke/regex-parsec#readme
+package-url:   https://github.com/wenkokke/regex-parsec
+category:      Text
+tested-with:   GHC ==9.4.2
+
+library
+  build-depends:
+      array       >=0.1
+    , base        >=2
+    , bytestring  >=0.1
+    , containers  >=0.1
+    , parsec      >=2.0
+    , regex-base  >=0.80
+
+  exposed-modules:
+    Text.Regex.Parsec
+    Text.Regex.Parsec.ByteString
+    Text.Regex.Parsec.ByteString.Lazy
+    Text.Regex.Parsec.Common
+    Text.Regex.Parsec.FullParsec
+    Text.Regex.Parsec.FullParsecPosix
+    Text.Regex.Parsec.Pattern
+    Text.Regex.Parsec.ReadRegex
+    Text.Regex.Parsec.RegexParsecState
+    Text.Regex.Parsec.Sequence
+    Text.Regex.Parsec.String
+    Text.Regex.Parsec.Wrap
+
+  ghc-options:     -Wall -Werror -Wno-unused-do-bind
